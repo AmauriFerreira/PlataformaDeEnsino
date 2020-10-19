@@ -1,0 +1,94 @@
+/*
+*
+*@autor Newdecyr Motta
+*version 0.1
+*/
+
+/*===================layout===================*/
+
+html, body, .capa{
+	height: 100%;
+}
+
+body{
+	/* border: 1px solid red; */
+	/* background: url("../imagem/imagemCapa1.jpg"), url("../imagem/imagemCapa2.jpg"); */
+	/* background: url("../imagem/imagemCapa1.jpg"), linear-gradient(50deg,#ff4169,#7c26f8); */ 
+
+	/*background: url("../imagem/imagemCapa1.jpg"); */
+	background-attachment: fixed;
+	font-family: Helvetica,Arial, sans-serif;
+}
+
+
+
+/******<Barra de Navegação>***********************/
+
+.img-logo {
+	height: 40px;
+	width: 132px;
+	display:block;
+	
+	 background-image: url("../imagem/logo2.jpg");
+	background-size: contain;
+	background-repeat:no-repeat;
+	
+
+}
+
+nav.navbar-transparente{ /*sobrescrever as classe na barra de navegação*/
+
+	padding: 15px 0px;
+	background: rgb(0,0,0,0.6);  /* rgb(256,256,256,0-1:opacidade)*/
+	border: none; /*remover a borda do head */
+
+}
+
+.navbar-brand{   /*sobrescrever a classe navbar-brand */
+	padding: 5px 15px;
+}
+
+.divisor{
+	width: 1px;
+	height: 16px;
+	background: white;
+	margin: 16px 10px;
+}
+.navbar-inverse .navbar-nav>li>a {
+	color: white;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+	color: #9bf0e1;
+}
+
+/****** </ Barra de Navegação >***********************/
+
+/************ < Imagem Capa > *****************************/
+
+.capa{
+	border: 1px solid red;
+	display: table; /*comportamento de tabela*/
+	width: 100%; /*para expandir por toda a tela */
+
+}
+
+.texto-capa{
+	text-align: center;
+	color: black;
+	display: table-cell; /*comportamento de célula de tabela */
+	vertical-align: middle; /*para centralizar verticalmente, mas precisa ter o display:table;  e o display:table-cell; */
+	
+}
+
+
+
+
+
+
+/*********************** Tipografia ***************/
+
+h1{
+	font-size: 100px;
+	font-weight: 900px;
+	letter-spacing: -5px; /*aproximar o texto se o valor for negativo.... afastar o texto se o valor for positivo*/
+}

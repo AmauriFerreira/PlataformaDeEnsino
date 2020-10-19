@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>PlataformaDeEnsino</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>AdicionarUsuario</servlet-name>
+  	<servlet-class>br.com.servlet.AdicionaUsuarioServler</servlet-class> 	
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AdicionarUsuario</servlet-name>
+  	<url-pattern>/adicionarUsuario</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  	<servlet-name>logarUsuario</servlet-name>
+  	<servlet-class>br.com.servlet.LogarUsuarioServler</servlet-class> 	
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>LogarUsuario</servlet-name>
+  	<url-pattern>/logarUsuario</url-pattern>
+  </servlet-mapping>
+  
+  
+     <servlet>
+  	<servlet-name>adicionaProfessor</servlet-name>
+  	<servlet-class>br.com.servlet.AdicionarProfessorServler</servlet-class> 	
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AdicionaProfessor</servlet-name>
+  	<url-pattern>/adicionaProfessor</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+   
+     <servlet>
+  	<servlet-name>adicionaCurso</servlet-name>
+  	<servlet-class>br.com.servlet.CriarCursoServler</servlet-class> 	
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AdicionaCurso</servlet-name>
+  	<url-pattern>/adicionaCurso</url-pattern>
+  </servlet-mapping>
+  
+  
+     
+     <servlet>
+  	<servlet-name>buscaCurso</servlet-name>
+  	<servlet-class>br.com.servlet.buscaCursoServler</servlet-class> 	
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>BuscaCurso</servlet-name>
+  	<url-pattern>/buscaCurso</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+       
+     <servlet>
+  	<servlet-name>excluirCurso</servlet-name>
+  	<servlet-class>br.com.servlet.excluirCursoServler</servlet-class> 	
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ExcluirCurso</servlet-name>
+  	<url-pattern>/ExcluirCurso</url-pattern>
+  </servlet-mapping>
+  
+  
+       <servlet>
+  	<servlet-name>atualizarCurso</servlet-name>
+  	<servlet-class>br.com.servlet.AtualizarCursoCursoServler</servlet-class> 	
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AtualizarCurso</servlet-name>
+  	<url-pattern>/atualizarCurso</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>

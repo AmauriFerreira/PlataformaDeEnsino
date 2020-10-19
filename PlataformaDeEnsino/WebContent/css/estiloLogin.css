@@ -1,0 +1,30 @@
+body{
+	background: #FFFFFF;
+}
+
+.borda1{
+	background: #FFFFFF;
+	padding-top: 50px;
+
+}
+
+.borda2{
+	
+	border: 2px solid #000000;
+	
+	padding: 0px;
+
+	margin: 10px auto;
+
+}
+
+.borda3{
+	border-left: 2px solid #000000;
+	background: #d8d8d8;
+
+}
+
+
+
+
+
