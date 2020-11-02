@@ -151,7 +151,7 @@ Pesquisar Curso: <input type="text" size="60" placeholder="nome do curso"  name=
 
                     <label for="inputDataInicio" class="col-sm-1 control-label">Data Início:</label>
                     <div class="col-sm-3">
-                   <input type="text" name="dtInicio"  value=<%=dtInicio%> id="inputDataInicio" >
+                   <input type="text" name="dtInicio"  value=<%=dtInicio%> id="inputDataInicio" class="form-control">
                    
                  </div>
   </div>
@@ -206,10 +206,8 @@ Pesquisar Curso: <input type="text" size="60" placeholder="nome do curso"  name=
     <input type="hidden" name="senha" value=<%=senha%> /><br />
 	<input type="hidden" name="acao" value="Login">
 	<input type="submit"  value="Limpar" class="btn btn-primary"/>
-	<a href="excluirCurso?logica=ExcluirCursoServlet&nomeCurso=${param.nomeCurso}"class="btn btn-primary" target="_self">Excluir</a>
-        
-    
-     <input type="hidden" name="acao" value="Atualizar">
+	<a href="excluirCurso?logica=ExcluirCursoServlet&nomeCurso=${param.nomeCurso}"class="btn btn-primary" target="_self">Excluir</a>   
+    <input type="hidden" name="acao" value="Atualizar">
 	<input type="submit"  value="Atualizar" class="btn btn-primary" name="atualizarCurso" formaction="atualizarCurso"/>
  
      </form>

@@ -1,44 +1,49 @@
+﻿<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>telaProfessor</title>
 
-
-  <!doctype html>
-  
-  <html lang="pt-br">
-  
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-      <title>Dados-Pessoais</title>
-
-
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-     <link rel="stylesheet" type="text/css" href="css/style-admin.css">
-    
-    </head>
- 
-  <body>
 
+    <link rel="stylesheet" type="text/css" href="css/telaProfessor.css">
+
+  </head>
+  
+   <h:head>
+    <h:outputStylesheet library="css" name="bootstrap.min.css" /> <!-- JÁ TINHA -->
+    <h:outputStylesheet library="css" name="style-admin.css" />      <!-- ADICIONAMOS AGORA -->
+</h:head>
+
+<h:body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="ListaContatos.jsp">Home</a>
+          
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
+         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
+           <ul class="nav navbar-nav">
+           <li class="active"><a href="">Home</a></li>  </ul>
+           
+           <a class="navbar-brand" href="CriarCurso.html">Criar Curso</a>
           
-           <li class="active"><a href="">Área do Professor</a></li>
+        <a class="navbar-brand" href="CadastroDeProfessor.html">Cadatrar Professor</a>
+        
+          <a class="navbar-brand" href="telaProfessor.html">Área do Professor</a>
           
-        <a class="navbar-brand" href="tela-meuCurso.html">Meus Cursos</a>
-          
-       
-             
           </ul>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+  <body>
 
+<br><br><br>
     <div class="container">
 <div class="page-header">
      <div class="row">
@@ -54,7 +59,7 @@
             </button>
    <ul class="dropdown-menu">
      <li><a href="tela-meuCurso.html">Cursos</a></li>
-     <li><a href="#">Tarefa</a></li>
+    <li><a href="tela-updateTarefa.jsp">Tarefa</a></li>
     <li><a href="#">Projeto</a></li>
     <li role="separator" class="divider"></li>
     <li><a href="tela-login.html">Sair</a></li>
@@ -74,7 +79,7 @@
        
 
 
-        <a href="" class="botao-conteudo col-sm-4">
+        <a href="tela-criarTarefa.html" class="botao-conteudo col-sm-4">
           <img src="imagem/CriarTarefa.jpg">
         </a>
 

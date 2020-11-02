@@ -62,6 +62,8 @@ public class CriarCursoDao {
 		List<Curso> listaDados = new ArrayList<Curso>();
 		PreparedStatement stmt;
 		
+	
+		
 		try {
 			stmt = connection.prepareStatement("select *from curso");
 			ResultSet rs = stmt.executeQuery();
