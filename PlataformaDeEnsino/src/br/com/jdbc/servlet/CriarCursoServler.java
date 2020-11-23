@@ -3,6 +3,7 @@ package br.com.jdbc.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -51,17 +52,11 @@ public class CriarCursoServler   extends HttpServlet {
 			dao.salvar(curso);
 		
 
-        // imprime o nome do contato que foi adicionado
-        out.println("<html>");
-        out.println("<body>");
-        out.println("Curso criado com sucesso!!!");
+ 
         
-               
-        out.println("</body>");
-        out.println("</html>");
-        
-        
-    
+			RequestDispatcher rd1 = request.getRequestDispatcher("/tela-meuCurso.jsp");
+        rd1.forward(request, response);
+
 }
 
 

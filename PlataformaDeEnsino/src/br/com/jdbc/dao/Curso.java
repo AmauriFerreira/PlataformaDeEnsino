@@ -13,6 +13,8 @@ import javax.persistence.TemporalType;
 
 public class Curso {
 	
+	
+	private Long id;
 	private String nomeCoordenador;
 	private String nomeProfessor;
 	private String nomeCurso;
@@ -22,6 +24,14 @@ public class Curso {
 	private String ementaCurso;
 	
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
 	public String getNomeCoordenador() {
 		return nomeCoordenador;
 	}

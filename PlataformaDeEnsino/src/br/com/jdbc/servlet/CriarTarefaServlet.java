@@ -65,14 +65,14 @@ import javax.servlet.RequestDispatcher;
 	        
 	       tarefa.setMaterialTarefa(materialTarefa);
 	        
-	        
+	       System.out.println("Criar tarefa servet2");
 	        // salva o contato
 	      CriarTarefaDao dao = new  CriarTarefaDao();
 	       
 				dao.salvar(tarefa);
 			
 
-				RequestDispatcher rd1 = request.getRequestDispatcher("/tela-criarTarefa.html");
+				RequestDispatcher rd1 = request.getRequestDispatcher("/tela-criarTarefa.jsp");
 		        rd1.forward(request, response);
 	  
 	       

@@ -93,7 +93,7 @@ public class AdicionarProfessorServler  extends HttpServlet {
 
      
         
-    	RequestDispatcher rd1 = request.getRequestDispatcher("/CadastroProfissao.html");
+    	RequestDispatcher rd1 = request.getRequestDispatcher("/CadastroProfissao.jsp");
         rd1.forward(request, response);
 	
 }

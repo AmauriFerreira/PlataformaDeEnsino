@@ -2,6 +2,7 @@ package br.com.jdbc.dao;
 
 public class Tarefa {
 	
+	private Long id;
 	private String temaTarefa;
 	private String conteudoTarefa;
 	private String objetivoTarefa;
@@ -11,6 +12,15 @@ public class Tarefa {
 	private String materialTarefa;
 	
 	
+	
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public String getTemaTarefa() {
 		return temaTarefa;
 	}

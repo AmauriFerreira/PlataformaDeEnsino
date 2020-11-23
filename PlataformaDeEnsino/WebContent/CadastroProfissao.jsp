@@ -1,0 +1,149 @@
+
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+     <title>Informação-Acadêmica</title>
+
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="css/style-admin.css">
+</head>
+<h:body>
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="ListaContatos.jsp">Home</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+          
+            <a class="navbar-brand" href="tela-listaDeCurso.jsp">Lista de Curso</a>
+            
+          <a class="navbar-brand" href="tela-listaDeAluno.jsp">Lista de Aluno</a>
+          
+      
+        <li class="active"><a href="">Lista de Professor</a></li>
+       
+       
+        <a class="navbar-brand" href="tela-meuCurso.jsp">Área do Professor</a>
+         
+        <a class="navbar-brand" href="tela-meusCursosAluno.jsp">Área do Aluno</a>
+             
+          </ul>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+     <div class="container">
+         
+         <div class="page-header">
+
+          <h2>Informação Acadêmica:</h2>
+        
+         </div>
+    
+      <form action="adicionaProfessor">
+  
+
+          <div class="row">
+
+      <div class="form-group">
+
+                <label for="inputDiploma" class="col-sm-1 control-label">Diploma:</label>
+                   <div class="col-sm-11">
+                     <input type="file" id="inputDiploma" name="diploma">
+                    </div>
+                  </div>
+           </div> <!-- fim da row -->
+           <br>
+
+ <div class="row">
+
+      <div class="form-group">
+
+
+                <label for="inputNomeCurso"class="col-sm-1 control-label">Nome do Curso:</label>
+                  <div class="col-sm-5">
+                   <input type="text" name="nomeCurso" id="inputNomeCurso"class="form-control" >
+                  </div>
+
+                       <label for="inputNomeInstituicao"  class="col-sm-1 control-label">Nome da Instituição:</label>
+                     <div class="col-sm-5">
+                        <input type="text" name="nomeInstituicao"  id="inputNomeInstituicao"class="form-control" >
+                     </div>    
+  </div>
+
+     
+ </div> <!-- fim da row-->
+
+ <br>
+
+  <div class="row">
+
+      <div class="form-group">
+
+                <label for="inputTipoCurso" class="col-sm-1 control-label">Tipo do Curso:</label>
+                   <div class="col-sm-5">
+                     <input type="text"  id="inputTipoCurso"class="form-control" >
+                    </div>
+
+                <label for="inputCargaHoraria" class="col-sm-1 control-label">Carga Horária:</label>
+                  <div class="col-sm-5">
+                     <input type="number" name="cargaHoraria"  id="inputCargaHoraria"class="form-control" >
+                  </div>              
+  </div>
+
+     
+ </div> <!-- fim da row-->
+
+ <br>
+
+ <div class="row">
+
+      <div class="form-group">
+
+                <label for="inputDataInicio" class="col-sm-1 control-label">Data Início:</label>
+                    <div class="col-sm-5">
+                   <input type="date" name="dtInicio" class="form-control" id="inputDtInicio" >
+                 </div>
+    
+
+                <label for="inputDataTermino" class="col-sm-1 control-label">Data Término:</label>
+                   <div class="col-sm-5">
+                    <input type="date" name="dtTermino" class="form-control" id="inputDtTermino" >
+                 </div>
+             
+  </div>
+
+     
+ </div> <!-- fim da row-->    
+	
+<br>
+   <div align="center">
+    <br> <br> <br> <br> <br> <br>
+ <a href="CadastroDeProfessor.html" class="btn btn-primary" target="_self">voltar</a>  
+ <input type="hidden" name="acao" value="Professor">		
+<button input type="submit"  value="Cadastrar"   class="btn btn-primary ">cadastrar</button>
+   </div>
+     
+     </form>
+	     </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap/js/bootstrap.min.js" ></script>
+
+
+
+</h:body>
+</html>

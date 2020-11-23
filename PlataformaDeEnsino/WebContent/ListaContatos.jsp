@@ -29,12 +29,17 @@
            <ul class="nav navbar-nav">
            <li class="active"><a href="">Home</a></li>  </ul>
            
-           <a class="navbar-brand" href="CriarCurso.html">Criar Curso</a>
+            <a class="navbar-brand" href="tela-listaDeCurso.jsp">Lista de Curso</a>
+           
+          <a class="navbar-brand" href="tela-listaDeAluno.jsp">Lista de Aluno</a>
           
-        <a class="navbar-brand" href="CadastroDeProfessor.html">Cadatrar Professor</a>
+        <a class="navbar-brand" href="tela-listaProfessor.jsp">Lista de Professor</a>
         
-          <a class="navbar-brand" href="telaProfessor.html">Área do Professor</a>
-          
+         <a class="navbar-brand" href="tela-meuCurso.jsp">Área do Professor</a>
+         
+        <a class="navbar-brand" href="tela-minhasAulas.jsp">Área do Aluno</a>
+      
+        
           </ul>
           </ul>
         </div><!--/.nav-collapse -->

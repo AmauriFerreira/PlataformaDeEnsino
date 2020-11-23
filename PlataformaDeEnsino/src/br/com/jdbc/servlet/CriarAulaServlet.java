@@ -15,7 +15,7 @@ import br.com.jdc.Cadastro.dao.CriarAulaDao;
 
 
 
-@WebServlet("/criarAula")
+@WebServlet("/CriarAula")
 public class CriarAulaServlet   extends HttpServlet {
     protected void service(HttpServletRequest request,HttpServletResponse response)
                         throws IOException, ServletException {
@@ -42,7 +42,7 @@ public class CriarAulaServlet   extends HttpServlet {
         
         String videoAula = request.getParameter("videoAula");
     
-      
+		System.out.println("Gravado servet2");
 
         // monta um objeto curso
        Aula aula = new   Aula();
@@ -74,7 +74,7 @@ public class CriarAulaServlet   extends HttpServlet {
 			dao.salvar(aula);
 		
 
-			RequestDispatcher rd1 = request.getRequestDispatcher("/tela-criarAula.html");
+			RequestDispatcher rd1 = request.getRequestDispatcher("/tela-criarAula.jsp");
 	        rd1.forward(request, response);
   
         

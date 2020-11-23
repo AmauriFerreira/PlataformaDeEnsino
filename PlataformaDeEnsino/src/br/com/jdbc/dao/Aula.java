@@ -2,6 +2,7 @@ package br.com.jdbc.dao;
 
 public class Aula {
 	
+	private Long id;
 	private String temaAula;
 	private String conteudoAula;
 	private String objetivoAula;
@@ -11,6 +12,17 @@ public class Aula {
 	private String bibliografiaAula;
 	private String materialAula;
 	private String videoAula;
+	
+	
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
 	public String getTemaAula() {
 		return temaAula;
 	}
@@ -65,10 +77,19 @@ public class Aula {
 	public void setVideoAula(String videoAula) {
 		this.videoAula = videoAula;
 	}
-	
-	
-	
-	
-	
+
+	    public boolean ehIgual(Long id) {
+        try {if(!this.id.equals(id)) {
+            return false;
+        }
+
+      
+        } catch (NullPointerException e) {
+			return false;
+		}
+
+        return true;
+    }
+
 	
 }

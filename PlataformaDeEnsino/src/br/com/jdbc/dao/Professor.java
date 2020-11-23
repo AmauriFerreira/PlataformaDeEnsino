@@ -13,6 +13,7 @@ import javax.persistence.TemporalType;
 
 public class Professor extends Usuario{
 
+	private Long id;
 	private String diploma;
 	private String nomeCurso;
 	private String nomeInstituicao;
@@ -21,6 +22,13 @@ public class Professor extends Usuario{
 	private String dtInicio;
 	private String dtTermino;
 	private String fk_id;
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public String getDiploma() {
 		return diploma;
 	}
@@ -69,6 +77,9 @@ public class Professor extends Usuario{
 	public void setFk_id(String fk_id) {
 		this.fk_id = fk_id;
 	}
+	
+	
+	
 	
 	
 	

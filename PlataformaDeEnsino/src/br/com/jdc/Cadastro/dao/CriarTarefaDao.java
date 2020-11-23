@@ -39,23 +39,12 @@ public class CriarTarefaDao {
 			
 			
 			stmt.setString(1, tarefa.getTemaTarefa());
-			
 			stmt.setString(2, tarefa.getAvaliacaoTarefa());
-			
 			stmt.setString(3, tarefa.getConteudoTarefa());
-			
 			stmt.setString(4, tarefa.getObjetivoTarefa());
-			
 			stmt.setString(5, tarefa.getDtInicioTarefa());
-			
 			stmt.setString(6, tarefa.getDtTerminoTarefa());
-		
 			stmt.setString(7, tarefa.getMaterialTarefa());
-			
-	
-			
-	
-			
 
 			// executa
 			stmt.execute();
@@ -116,18 +105,54 @@ public class CriarTarefaDao {
 	}
 
 
-
-public void excluir(String temaTarefa) {
-		
-		String sql = "delete from tarefa where temaTarefa=?";
+	public List<Tarefa> getLista() {
 		try {
-			PreparedStatement stmt = this.connection.prepareStatement(sql);
-			stmt.setString(1,temaTarefa);
-			stmt.execute();
+			
+			List<Tarefa> tarefas = new ArrayList<Tarefa>();
+		
+			PreparedStatement stmt = this.connection.prepareStatement("select IFNULL(id,'S/N') id, IFNULL(temaTarefa,'S/N') temaTarefa,IFNULL(avaliacaoTarefa,'S/N') avaliacaoTarefa,IFNULL(conteudoTarefa,'S/N') conteudoTarefa,IFNULL(objetivoTarefa,'S/N') objetivoTarefa,IFNULL(dtInicioTarefa,'S/N') dtInicioTarefa,IFNULL(dtTerminoTarefa,'S/N') dtTerminoTarefa,IFNULL(materialTarefa,'S/N') materialTarefa  from tarefa");
+
+			ResultSet rs = stmt.executeQuery();
+
+			while(rs.next()) {
+               Tarefa tarefa = new Tarefa();
+               
+                tarefa.setId(rs.getLong("id"));
+				tarefa.setTemaTarefa(rs.getString("temaTarefa"));
+				tarefa.setAvaliacaoTarefa(rs.getString("avaliacaoTarefa"));
+				tarefa.setConteudoTarefa(rs.getString("conteudoTarefa"));
+				tarefa.setObjetivoTarefa(rs.getString("objetivoTarefa"));
+				tarefa.setDtInicioTarefa(rs.getString("dtInicioTarefa"));
+				tarefa.setDtTerminoTarefa(rs.getString("dtTerminoTarefa"));
+				tarefa.setMaterialTarefa(rs.getString("materialTarefa"));
+			
+				//adiciona o contato na lista
+				tarefas.add(tarefa);
+			}
+
+			rs.close();
+			stmt.close();
+
+			return tarefas;
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
 	}
+	
+	
+	
+
+public void excluir(Tarefa tarefa )  {
+
+	String sql = "delete from tarefa where id=?";
+	try {
+		PreparedStatement stmt = this.connection.prepareStatement(sql);
+		stmt.setLong(1, tarefa.getId());
+		stmt.execute();
+	} catch (SQLException e) {
+		throw new RuntimeException(e);
+	}
+}
 
 
 public void atualiza(Tarefa tarefa) {

@@ -11,7 +11,7 @@ public class Usuario extends Endereco {
 	private String telefoneCelular;
 	private String email;
 	private String senha;
-	private String id;
+	private Long id;
 	
 	public String getNome() {
 		return nome;
@@ -61,13 +61,13 @@ public class Usuario extends Endereco {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
-	
+
 
 
 }

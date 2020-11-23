@@ -5,11 +5,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+
 
 import br.com.jdbc.Modelo.LoginUsuario;
 import br.com.jdbc.conexao.ConnectionFactory;
@@ -136,5 +138,40 @@ public void atualiza(Curso curso) {
 	}
 }
 
+
+
+public List<Curso> getLista() {
+	try {
+		List<Curso> cursos = new ArrayList<Curso>();
+		PreparedStatement stmt = this.connection.prepareStatement("select IFNULL(id,'S/N') id,IFNULL(nomeCoordenador,'S/N') nomeCoordenador,IFNULL(nomeProfessor,'S/N') nomeProfessor,IFNULL(nomeCurso,'S/N') nomeCurso,"
+				+ "IFNULL(cargaHoraria,'S/N') cargaHoraria,IFNULL(dtInicio,'S/N') dtInicio,IFNULL(requisitos,'S/N') requisitos,IFNULL(ementaCurso,'S/N') ementaCurso from curso");
+
+		ResultSet rs = stmt.executeQuery();
+
+		while(rs.next()) {
+			Curso curso = new Curso();
+			
+			//popula o objeto curso
+			curso.setId(rs.getLong("id"));
+			curso.setNomeCoordenador(rs.getString("nomeCoordenador"));
+			curso.setNomeProfessor(rs.getString("nomeProfessor"));
+			curso.setNomeCurso(rs.getString("nomeCurso"));
+			curso.setCargaHoraria(rs.getString("cargaHoraria"));
+			curso.setDtInicio(rs.getString("dtInicio"));
+			curso.setRequisitos(rs.getString("requisitos"));
+			curso.setEmentaCurso(rs.getString("ementaCurso"));
+		
+			//adiciona o contato na lista
+			cursos.add(curso);
+		}
+
+		rs.close();
+		stmt.close();
+
+		return cursos;
+	} catch (SQLException e) {
+		throw new RuntimeException(e);
+	}
+}
 
 }
