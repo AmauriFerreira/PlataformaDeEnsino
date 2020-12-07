@@ -212,15 +212,18 @@ Pesquisar Curso: <input type="text" size="60" placeholder="nome do curso"  name=
 	<input type="hidden" name="acao" value="Login">
 	<input type="submit"  value="Limpar" class="btn btn-primary"/>
 	<a href="excluirCurso?logica=ExcluirCursoServlet&nomeCurso=${param.nomeCurso}"class="btn btn-primary" target="_self">Excluir</a>   
+    
     <input type="hidden" name="acao" value="Atualizar">
 	<input type="submit"  value="Atualizar" class="btn btn-primary" name="atualizarCurso" formaction="atualizarCurso"/>
  
      </form>
  
     </h:body> 
-          <td>
+     
+     <td>
 
-</td> 
+    
+     </td> 
         
       </div>
 <c:import	url="rodape.jsp"/>

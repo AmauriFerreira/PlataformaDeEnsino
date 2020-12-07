@@ -36,6 +36,9 @@
              
             
         <a class="navbar-brand" href="tela-meusCursosAluno.jsp">Área do Aluno</a>
+        
+        
+          <a class="navbar-brand" href="entrada?acao=Logout">Sair</a>
           
           </ul>
           </ul>

@@ -73,8 +73,8 @@ public class buscaCursoServler   extends HttpServlet {
 			sessao.setAttribute("requisitos", curso1.getRequisitos());
 			sessao.setAttribute("ementaCurso", curso1.getEmentaCurso());
 			
-        	
-        	RequestDispatcher rd1 = request.getRequestDispatcher("/tela-meuCurso.jsp");
+			
+        	RequestDispatcher rd1 = request.getRequestDispatcher("/ListaContatos.jsp");
 	        rd1.forward(request, response);
         	 } 
         	 
@@ -88,7 +88,7 @@ public class buscaCursoServler   extends HttpServlet {
 				sessao.setAttribute("ementaCurso","****************");
 			
             	
-				RequestDispatcher rd1 = request.getRequestDispatcher("/tela-meuCurso.jsp");
+				RequestDispatcher rd1 = request.getRequestDispatcher("/ListaContatos.jsp");
 		        rd1.forward(request, response);
         	
         	

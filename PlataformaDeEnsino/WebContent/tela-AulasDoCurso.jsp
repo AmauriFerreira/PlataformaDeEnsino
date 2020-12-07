@@ -27,6 +27,9 @@
         <a class="navbar-brand" href="tela-meuCurso.jsp">Meus Cursos</a>
     
         <li class="active"><a href="">Aulas</a></li>
+        
+        
+          <a class="navbar-brand" href="entrada?acao=Logout">Sair</a>
           
           </ul>
           </ul>

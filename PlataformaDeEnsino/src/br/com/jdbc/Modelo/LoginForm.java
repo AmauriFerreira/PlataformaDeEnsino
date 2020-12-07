@@ -12,7 +12,7 @@ public class LoginForm implements Acao {
     public String executa(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-    	 return "redirect:entrada?=ListaContatos.jsp";
+    	return "forward:tela-login.html";
     }
 
 }

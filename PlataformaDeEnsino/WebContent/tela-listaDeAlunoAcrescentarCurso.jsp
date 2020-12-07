@@ -37,6 +37,8 @@
              
             
         <a class="navbar-brand" href="tela-meusCursosAluno.jsp">Área do Aluno</a>
+        
+          <a class="navbar-brand" href="entrada?acao=Logout">Sair</a>
           
           </ul>
           </ul>
@@ -79,14 +81,28 @@ Pesquisar Curso: <input type="text" size="60" placeholder="nome do curso"  name=
      
        <br>  
          
-     <hr/><h2>RA do Aluno: ${aluno.id_aluno}</h2><hr/>
+     <hr/><h2> 
+
+
+     RA do Aluno: ${aluno.id_aluno} 
+
+
+     </h2>
+     <hr/>
 
  <div class="row">
-
-  <div class="form-group">
+ <label for="scales"></label>
+ 
+ 
+<input type="checkbox" href="buscaTarefa?logica=buscaTarefaServler&tid_aluno=${aluno.id_aluno} id="id_aluno" name="scales" checked>
+   
+  
+                 <div class="form-group">
+    
                    <label class="col-sm-1 control-label">Nome:</label>
                      <div class="col-sm-11">
                        <input type="text" name="nome" value=${aluno.nome}  class="form-control" id="inputNome" placeholder="Nome:">
+                       
                      </div>
 
             
@@ -146,17 +162,24 @@ Pesquisar Curso: <input type="text" size="60" placeholder="nome do curso"  name=
 
 <br> 
 <br>
-<div class="row">
-
-<div class="text-center">
 
 
+    
 
-        
-</div> 
-</div>  <!-- fim da row -->
-		
+  </div>  <!-- fim da row -->
 </c:forEach>
+
+
+  <div class="row">
+
+     <div class="text-center">      
+  
+
+    <input type="hidden" name="acao" value="Adcionar alunos">
+	<input type="submit"  value="Adcionar Alunos" class="btn btn-primary" name="temaTarefa" formaction="atualizarTarefa"/>
+      
+      
+      </div>
 </table>
 
 
@@ -166,6 +189,15 @@ Pesquisar Curso: <input type="text" size="60" placeholder="nome do curso"  name=
 
 
 
+<script>
+function funcao1(){
+	
+
+	
+};
+
+
+</script>
 
 
 

@@ -23,11 +23,20 @@ public class Aluno extends Usuario{
 	public void setFoto(String foto) {
 		this.foto = foto;
 	}
+	
 
-	
-	
-	
-	
-	
+	public boolean ehIgual(String email, String senha){
+    try {if((!this.getEmail().equals(email)) && (!this.getSenha().equals(senha))){
+        return false;
+    }
+
+  
+    } catch (NullPointerException e) {
+		return false;
+	}
+
+    return true;
+}
+
 	
 }

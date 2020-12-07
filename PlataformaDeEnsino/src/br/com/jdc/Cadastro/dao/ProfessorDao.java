@@ -18,6 +18,7 @@ public class ProfessorDao {
 
 	private Connection connection;
 
+	
 
 	public ProfessorDao() {
 		this.connection = new ConnectionFactory().getConnection();
@@ -29,23 +30,24 @@ public class ProfessorDao {
 	        System.out.println(professor.getNomeInstituicao());
 	        System.out.println(professor.getTipoCurso());
 	        System.out.println(professor.getCargaHoraria());
-	        System.out.println(professor.getDtInicio());
-	        System.out.println(professor.getDtTermino());
+	        System.out.println(professor.getNome());
+	        System.out.println(professor.getFuncao());
 	        
 		try {
-			String sql = "insert into usuario" + "(nome,nomeMae,dtNascimento,cpf,telefoneFixo,telefoneCelular,email,senha)" + "values (?,?,?,?,?,?,?,?)";
+			String sql = "insert into usuario" + "(nome,funcao,nomeMae,dtNascimento,cpf,telefoneFixo,telefoneCelular,email,senha)" + "values (?,?,?,?,?,?,?,?,?)";
 			
 			// cria um preparedStatement
 			
 			PreparedStatement stmt = connection.prepareStatement(sql);
 			stmt.setString(1, professor.getNome());
-			stmt.setString(2, professor.getNomeMae());
-			stmt.setString(3, professor.getDtNascimento());
-			stmt.setString(4, professor.getCpf());
-			stmt.setString(5, professor.getTelefoneFixo());
-			stmt.setString(6, professor.getTelefoneCelular());
-			stmt.setString(7, professor.getEmail());
-			stmt.setString(8, professor.getSenha());
+			stmt.setString(2, professor.getFuncao());
+			stmt.setString(3, professor.getNomeMae());
+			stmt.setString(4, professor.getDtNascimento());
+			stmt.setString(5, professor.getCpf());
+			stmt.setString(6, professor.getTelefoneFixo());
+			stmt.setString(7, professor.getTelefoneCelular());
+			stmt.setString(8, professor.getEmail());
+			stmt.setString(9, professor.getSenha());
 			
 			// executa
 			stmt.execute();
@@ -168,3 +170,6 @@ try {
 
 
 }
+
+
+

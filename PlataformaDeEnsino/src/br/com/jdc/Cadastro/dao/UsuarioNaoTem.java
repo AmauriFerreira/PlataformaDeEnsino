@@ -6,6 +6,7 @@ public class UsuarioNaoTem {
 		private String nome;
 		private String email;
 		private String senha;
+		private String funcao;
 	
 		
 		
@@ -27,6 +28,13 @@ public class UsuarioNaoTem {
 		}
 		public void setSenha(String senha) {
 			this.senha = senha;
+		}
+		
+		public String getFuncao() {
+			return funcao;
+		}
+		public void setFuncao(String fincao) {
+			this.funcao = funcao;
 		}
 
 

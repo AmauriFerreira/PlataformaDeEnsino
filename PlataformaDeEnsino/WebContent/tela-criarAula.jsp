@@ -38,6 +38,9 @@
          <a class="navbar-brand" href="tela-AulasDoCurso.jsp">Aulas</a>
     
         <li class="active"><a href="">Criar Aula</a></li>
+        
+        
+          <a class="navbar-brand" href="entrada?acao=Logout">Sair</a>
           
 
           </ul>

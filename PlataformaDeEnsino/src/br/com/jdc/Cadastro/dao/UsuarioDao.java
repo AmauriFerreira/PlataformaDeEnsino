@@ -12,6 +12,9 @@ import java.util.List;
 import br.com.jdbc.Modelo.LoginUsuario;
 import br.com.jdbc.conexao.ConnectionFactory;
 import br.com.jdbc.dao.Usuario;
+import br.com.jdbc.dao.Aluno;
+
+import br.com.jdbc.dao.Funcionario;
 
 public class UsuarioDao {
 
@@ -88,18 +91,17 @@ public void exclui(Usuario usuario) {
 		List<LoginUsuario> usuarios = new ArrayList<LoginUsuario>();
 		PreparedStatement stmt;
 		try {
-			stmt = connection.prepareStatement("select *from usuario");
+			stmt = connection.prepareStatement("select *from funcionario");
 			ResultSet rs = stmt.executeQuery();
 
 			while (rs.next()) {
 
-				LoginUsuario usuario = new LoginUsuario();
+				LoginUsuario funcionario = new LoginUsuario();
 				
-				usuario.setNome(rs.getString("nome"));
-				usuario.setEmail(rs.getString("email"));
-				usuario.setSenha(rs.getString("senha"));
-				
-				usuarios.add(usuario);
+				funcionario.setNome(rs.getString("nome"));
+				funcionario.setEmail(rs.getString("email"));
+				funcionario.setSenha(rs.getString("senha"));
+				usuarios.add(funcionario);
 			}
 			
 		} catch (SQLException e) {
@@ -111,6 +113,77 @@ public void exclui(Usuario usuario) {
 	    for(LoginUsuario loginUsuario : usuarios) {
 	        if(loginUsuario.ehIgual(email, senha)) { 
 	            return loginUsuario;
+
+	        }
+	    }
+	    return null;
+	}
+	
+	
+	public Usuario existeUsuarioProfessor(String email, String senha) {
+		List<Usuario> usuariosProfessor = new ArrayList<Usuario>();
+		PreparedStatement stmt;
+		try {
+			stmt = connection.prepareStatement("select *from usuario");
+			ResultSet rs = stmt.executeQuery();
+
+			while (rs.next()) {
+
+				Usuario usuario = new Usuario();
+				
+				usuario.setNome(rs.getString("nome"));
+				usuario.setEmail(rs.getString("email"));
+				usuario.setSenha(rs.getString("senha"));
+				usuario.setFuncao(rs.getString("funcao"));
+				usuariosProfessor.add(usuario);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
+	    for(Usuario loginUsuarioProfessor: usuariosProfessor) {
+	        if(loginUsuarioProfessor.ehIgual(email, senha)) { 
+	            return loginUsuarioProfessor;
+
+	        }
+	    }
+	    return null;
+	}
+	
+	
+	
+	
+	public Aluno existeUsuarioAluno(String email, String senha) {
+		List<Aluno> usuariosAluno = new ArrayList<Aluno>();
+		PreparedStatement stmt;
+		try {
+			stmt = connection.prepareStatement("select *from aluno");
+			ResultSet rs = stmt.executeQuery();
+
+			while (rs.next()) {
+
+				Aluno aluno = new Aluno();
+				
+				aluno.setNome(rs.getString("nome"));
+				aluno.setEmail(rs.getString("email"));
+				aluno.setSenha(rs.getString("senha"));
+				
+				
+				usuariosAluno.add(aluno);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
+	    for(Aluno loginUsuarioAluno : usuariosAluno) {
+	        if(loginUsuarioAluno.ehIgual(email, senha)) { 
+	            return loginUsuarioAluno;
 
 	        }
 	    }

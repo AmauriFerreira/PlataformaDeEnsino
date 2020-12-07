@@ -3,7 +3,9 @@
 									br.com.jdc.Cadastro.dao.*,
 									br.com.jdbc.Modelo.*,
 									br.com.jdbc.dao.*"	%>
-									
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>	
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -37,6 +39,9 @@
              
             
         <a class="navbar-brand" href="tela-meusCursosAluno.jsp">Área do Aluno</a>
+        
+        
+          <a class="navbar-brand" href="entrada?acao=Logout">Sair</a>
           
           </ul>
           </ul>

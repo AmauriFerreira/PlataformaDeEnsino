@@ -35,6 +35,8 @@
            
            
               <li class="active"><a href="">Visualizar Tarefas</a></li>  </ul>
+              
+                <a class="navbar-brand" href="entrada?acao=Logout">Sair</a>
           
           </ul>
           </ul>
@@ -94,26 +96,21 @@ Pesquisar Curso: <input type="text" size="60" placeholder="nome do curso"  name=
  </div> <!-- fim da row-->
 
 
-
-
-
-           <br>
-           <br>
-   <br>
-   
 <div class="row">
 
 <div class="text-center">
+<button>
+		<iframe src="Química-da-Vida-P1" style="width: 300%;height: 200%;border: none;">Download do material2</iframe>
+		</button>
 
-
-        <button class="btn btn-primary" onclick="download();">Download do material</button>
-
-			
-
-   
+  <br>  <br>
+		<a href="Química-da-Vida-P1" class="btn btn-primary" target="_blank">Download do material</a>
         
 </div> 
 </div>  <!-- fim da row -->
+		
+		
+
 
   <br>
   <br>

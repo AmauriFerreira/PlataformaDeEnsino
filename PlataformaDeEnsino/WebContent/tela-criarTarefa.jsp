@@ -38,6 +38,9 @@
          <a class="navbar-brand" href="tela-TarefasDoCurso.jsp">Tarefas</a>
     
         <li class="active"><a href="">Criar Tarefa</a></li>
+        
+        
+          <a class="navbar-brand" href="entrada?acao=Logout">Sair</a>
 
           </ul>
           </ul>

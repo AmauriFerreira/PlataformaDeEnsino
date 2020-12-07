@@ -30,6 +30,9 @@
            
            
               <li class="active"><a href="">Aulas</a></li>  </ul>
+              
+              
+                <a class="navbar-brand" href="entrada?acao=Logout">Sair</a>
            
    
      

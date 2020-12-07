@@ -37,6 +37,9 @@
         <a class="navbar-brand" href="tela-listaProfessor.jsp">Área do Professor</a>
          
         <a class="navbar-brand" href="tela-meusCursosAluno.jsp">Área do Aluno</a>
+        
+        
+          <a class="navbar-brand" href="entrada?acao=Logout">Sair</a>
              
           </ul>
           </ul>
@@ -59,10 +62,18 @@
 
   <div class="form-group">
                    <label class="col-sm-1 control-label">Nome:</label>
-                     <div class="col-sm-11">
+                     <div class="col-sm-8">
                        <input type="text" name="nome"  class="form-control" id="inputNome" placeholder="Nome:">
                      </div>
-
+                     
+   
+                   <label for="inputFuncao" class="col-sm-1 control-label">Função:</label>
+         			<div class="col-sm-2">
+             		<select class="form-control" name="funcao" id="inputFuncao">
+                  <option value="Professor">Professor</option>
+                  <option value="Admin">Admin</option>
+                	</select>
+                   </div>
             
         
   </div>
@@ -77,20 +88,24 @@
            <div class="row">
 
               <div class="form-group"> 
-                <label for="inputNomeMae" class="col-sm-1 control-label">Nome da Mãe:</label>
-                  <div class="col-sm-5">
+                 
+                 <label for="inputNomeMae" class="col-sm-1 control-label">Nome da Mãe:</label>
+                <div class="col-sm-8">
+                   
                    <input type="text" name="nomeMae"  class="form-control" id="inputNomeMae" placeholder="Nome:">
                
                  </div>
-   
-                   <label for="inputDataNacimento" class="col-sm-1 control-label">Data de Nascimento:</label>
-               
-                 <div class="col-sm-5">
                    
+                   <label for="inputDataNacimento" class="col-sm-1 control-label">Data de Nascimento:</label>
+                 <div class="col-sm-">
+                 
                    <input type="date" name="dtNascimento" id="inputDataNacimento" name="DataNacimento">
+                   
                  </div>
+                   
+                   
     </div> 
-           </div> <!-- fim da row--> 
+    </div> <!-- fim da row--> 
 
 <br>
            <div class="row">

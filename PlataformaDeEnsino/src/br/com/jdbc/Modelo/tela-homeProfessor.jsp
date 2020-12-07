@@ -4,8 +4,7 @@
 									br.com.jdbc.Modelo.*,
 									br.com.jdbc.dao.*"	%>
 								
-
-
+								
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>									
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -13,7 +12,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-     <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -65,7 +64,7 @@
 
 <br /><br />
 <div class="text-center">
-<h1>Home do Professor</h1>
+<h2>Home do Professor</h2>
 </div>
 <hr />
      
@@ -76,24 +75,6 @@
    
 <table>
 
- <h1>
-.Atendimento personalizado para aulas online <img src='<c:url value="/imagem.png"/>' /><br>
-
-
-
-
-.Ambiente interativo &nbsp;&nbsp;&nbsp; <img src='<c:url value="/ambinetInterativo.png"/>'/><br><br>
-
-       
-
-.Aulas Gravadas  &nbsp;&nbsp;&nbsp;<img src='<c:url value="/aulasGravas.png"/>'/><br><br>
-
-
-
-
-
-
-</h1>
 
 
 
@@ -104,5 +85,5 @@
   </body>
 
 </table>
-   <c:import	url="rodape.jsp"/>
+  
 </html>

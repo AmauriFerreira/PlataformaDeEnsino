@@ -27,6 +27,7 @@ public class AdicionarProfessorServler  extends HttpServlet {
 
         // buscando os parâmetros no request
         String nome = request.getParameter("nome");
+        String funcao = request.getParameter("funcao");
         String nomeMae = request.getParameter("nomeMae");
         String dtNascimento = request.getParameter("dtNascimento");
         String cpf = request.getParameter("cpf");
@@ -59,6 +60,7 @@ public class AdicionarProfessorServler  extends HttpServlet {
         // monta um objeto contato
         Professor professor = new  Professor();
         professor.setNome(nome);
+        professor.setFuncao(funcao);
         professor.setNomeMae(nomeMae);
         professor.setDtNascimento(dtNascimento);
         professor.setCpf(cpf);

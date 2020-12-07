@@ -1,11 +1,19 @@
 package br.com.jdbc.dao;
 
 public class Funcionario extends Usuario{
+	
+	private String nome;
 	private String registroFuncional;
 	private String cargo;
 	private String email;
 	private String senha;
 	private String fk_id;
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 	public String getRegistroFuncional() {
 		return registroFuncional;
 	}
@@ -36,6 +44,8 @@ public class Funcionario extends Usuario{
 	public void setFk_id(String fk_id) {
 		this.fk_id = fk_id;
 	}
+	
+	
 	
 	
 }

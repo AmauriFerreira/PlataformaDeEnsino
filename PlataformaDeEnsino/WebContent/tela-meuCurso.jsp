@@ -28,7 +28,7 @@
         <li class="active"><a href="">Meus Cursos</a></li>
             
           
-          
+            <a class="navbar-brand" href="entrada?acao=Logout">Sair</a>
           </ul>
           </ul>
         </div><!--/.nav-collapse -->

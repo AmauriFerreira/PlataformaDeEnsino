@@ -51,6 +51,10 @@
            
            
               <li class="active"><a href="">Assistir Aula</a></li>  </ul>
+              
+              
+              
+                <a class="navbar-brand" href="entrada?acao=Logout">Sair</a>
 
           </ul>
           </ul>
@@ -76,8 +80,6 @@
 				
 			String nomeVideoAula = (String)sessao.getAttribute("videoAula");
 			
-			
-		
 						
 			%>
 			

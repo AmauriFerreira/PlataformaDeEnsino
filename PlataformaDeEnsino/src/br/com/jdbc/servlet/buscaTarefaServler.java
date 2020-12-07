@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import antlr.collections.List;
+import br.com.jdbc.dao.Aula;
 import br.com.jdbc.dao.Tarefa;
 import br.com.jdc.Cadastro.dao.CriarTarefaDao;
 
@@ -67,8 +68,13 @@ tarefa.setMaterialTarefa(materialTarefa);
 
 
 
+
+
+
 // salva o contato
 CriarTarefaDao dao = new  CriarTarefaDao();
+
+
 
 Tarefa tarefa1 = dao.GetTarefa(temaTarefa);
 	
@@ -86,14 +92,14 @@ Tarefa tarefa1 = dao.GetTarefa(temaTarefa);
 	sessao.setAttribute("dtInicioTarefa", tarefa1.getDtInicioTarefa());
 	sessao.setAttribute("dtTerminoTarefa", tarefa1.getDtTerminoTarefa());
 	sessao.setAttribute("materialTarefa", tarefa1.getMaterialTarefa());
-
-    
+	
+	
     System.out.println("passei aqui no banco");
     
     System.out.println(tarefa1.getTemaTarefa());
     
     System.out.println(tarefa1.getConteudoTarefa());
-    
+
   
 	
 	RequestDispatcher rd1 = request.getRequestDispatcher("/tela-updateTarefa.jsp");
@@ -101,7 +107,6 @@ Tarefa tarefa1 = dao.GetTarefa(temaTarefa);
    
 	}
 	
-	 
 	 
 	HttpSession sessao = request.getSession();
 	sessao.setAttribute("temaTarefa","****************");
@@ -116,9 +121,6 @@ Tarefa tarefa1 = dao.GetTarefa(temaTarefa);
 	RequestDispatcher rd1 = request.getRequestDispatcher("/tela-updateTarefa.jsp");
     rd1.forward(request, response);
 	
-
-
-
 
 
   }

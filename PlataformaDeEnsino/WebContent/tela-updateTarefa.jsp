@@ -33,35 +33,50 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
- <nav class="navbar navbar-inverse navbar-fixed-top">
+<h:body>
+     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="ListaContatos.jsp">Home</a>
+          
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
+         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
+           <ul class="nav navbar-nav">
+          
+        <a class="navbar-brand" href="tela-homeProfessor.jsp">Home</a>
+      
+           <a class="navbar-brand" href="tela-meuCurso.jsp">Meus Cursos</a>
+           
+           
+           <a class="navbar-brand" href="tela-TarefasDoCurso.jsp">Tarefas</a>
+    
+        <li class="active"><a href="">Atualizar Tarefas</a></li>
         
-          <a class="navbar-brand" href="telaProfessor.html">Área do Professor</a>
-             
-          <a class="navbar-brand" href="tela-meuCurso.html">Meus Cursos</a>
-         
-
+          <a class="navbar-brand" href="entrada?acao=Logout">Sair</a>
+        
+          
           </ul>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-  <br>  <br>
-  
+
+<br /><br />
+<div class="text-center">
+<br>
+<h1>Atualizar Tarefas </h1>
+</div>
+<hr />
 
 
-
+ 
 
 			<%
 				HttpSession sessao = request.getSession();
 			
-						
+			
+			           
+			            
 						String temaTarefa = (String)sessao.getAttribute("temaTarefa");
 
 						String avaliacaoTarefa =(String)sessao.getAttribute("avaliacaoTarefa");
@@ -79,55 +94,12 @@
 			%>
 
 
-    <div class="container">
-<div class="page-header">
-     <div class="row">
-       <div class="col-sm-10 text-center">
-          <p>NOME: NEWDECYR CARLOS MOTTA JÚNIOR       RF: 32953</p>
-          <p>CARGO / FUNÇÃO: PROFESSOR DE MATEMÁTICA – NÍVEL II</p>
-          <p>ESCOLA MUNICIPAL DE ENSINO FUNDAMENTAL APRENDA MAIS</p>
-        </div>
-          <div class="col-sm-2 text-right">
-           <button type="button"  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #FFFFFF">
-    
-          <img src="imagem/usuario.jpg" class="img-circle">
-            </button>
-   <ul class="dropdown-menu">
-     <li><a href="#">Aula</a></li>
-     <li><a href="#">Tarefa</a></li>
-    <li><a href="#">Projeto</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="tela-login.html">Sair</a></li>
-  </ul>
-          </div>
+ <div class="container">
 
-    </div> <!--fim da row -->
-    
-      <hr/>
+  <form action=" "> 
 
- <form action="buscaTarefa">
-<div class="text-center">
-Pesquisar Tarefa: <input type="text" size="60" placeholder="nome do curso"  name="temaTarefa"/> 
-
-<input type="hidden" name="acao" value="temaTarefa">		
-<button input type="submit"  value="Pesquisar">Pesquisar</button>	
- 
-</div>
-</form>       
-        
-
-           
-</div>
-      <div class="row">
-      <div class="text-center col-sm-12">
-        <h3>Atualizar Tarefa</h3>
-      </div>
-   
-   </div> <!--fim da row -->
-
- <form action="buscaTarefa">  
        
-       <div class="row">
+<div class="row">
 
   <div class="form-group">
                    <label for="inputTemaTarefa" class="col-sm-1 control-label">Título:</label>
@@ -145,7 +117,6 @@ Pesquisar Tarefa: <input type="text" size="60" placeholder="nome do curso"  name
  </div> <!-- fim da row-->
 
  <br>
-      
 <hr />  
         <div class="row">
 
@@ -192,13 +163,13 @@ Pesquisar Tarefa: <input type="text" size="60" placeholder="nome do curso"  name
 
                 <label for="inputDtInicioTarefa" class="col-sm-1 control-label">Data Início:</label>
                     <div class="col-sm-5">
-                   <input type="text" name="dtInicioTarefa" value=<%=dtInicioTarefa%>  id="inputDtInicioTarefa">
+                   <input type="date" name="dtInicioTarefa" value=<%=dtInicioTarefa%>  id="inputDtInicioTarefa">
                  </div>
   
 
                 <label for="inputDtTerminoTarefa" class="col-sm-1 control-label">Data Término:</label>
                    <div class="col-sm-5">
-                   <input type="text" name="dtTerminoTarefa" value=<%=dtTerminoTarefa%> id="inputDtTerminoTarefa" >
+                   <input type="date" name="dtTerminoTarefa" value=<%=dtTerminoTarefa%> id="inputDtTerminoTarefa" >
                  </div>
              
   </div>
@@ -232,22 +203,13 @@ Pesquisar Tarefa: <input type="text" size="60" placeholder="nome do curso"  name
 
   <div class="row">
 
-     <div class="text-center">
-                
-                
-                
-        <form action="buscaTarefa">  
-        <a  href= "tela-updateTarefa.jsp" class="btn btn-primary" target="_self">Limpar</a>  
-        </form> 
-        
-          <input type="hidden" name="acao" value="Atualizar">
-      <input type="hidden" name="acao" value="Atualizar">
-	<input type="submit" onclick="funcao1()"  value="Atualizar" class="btn btn-primary" name="atualizarTarefa" formaction="atualizarTarefa"/>
- 
+     <div class="text-center">      
+  
 
-        <input type="hidden" name="acao" class="btn btn-primary"/>
-	    <a href="excluirTarefa?logica=ExcluirTarefaServlet&temaTarefa=${param.temaTarefa}"class="btn btn-primary" onclick="funcao2()"  target="_self">Excluir</a>
- 
+    <input type="hidden" name="acao" value="Atualizar">
+	<input type="submit"  value="Atualizar" class="btn btn-primary" name="temaTarefa" formaction="atualizarTarefa"/>
+      
+      
       </div>
     
 
@@ -256,18 +218,11 @@ Pesquisar Tarefa: <input type="text" size="60" placeholder="nome do curso"  name
   <br>
   <br>
 
-   </form>
+   
 
-        
-</div>
-    
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js" ></script>
-    <script src="javascript/tela-updateTarefa.js"></script>
-  </body>
+  </form > 
+   </h:body> 
+    <c:import	url="rodape.jsp"/>
 </html>
 
 <script>

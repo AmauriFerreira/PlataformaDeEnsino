@@ -29,6 +29,8 @@
     
         <li class="active"><a href="">Tarefas</a></li>
         
+          <a class="navbar-brand" href="entrada?acao=Logout">Sair</a>
+        
           
           </ul>
           </ul>
@@ -47,13 +49,13 @@
 
 <div class="text-center">
 
-<form action="buscaCurso">
-Pesquisar Curso: <input type="text" size="60" placeholder="nome do curso"  name="nomeCurso"/> 
+<form action="buscaTarefa">
+Pesquisar Tarefa: <input type="text" size="60" placeholder="título da tarema"  name="temaTarefa"/> 
 <input type="hidden" name="acao" value="nomeCurso">		
 <button input type="submit"  value="Pesquisar">Pesquisar</button>	
 
 <input type="submit" onclick="funcao1()"  value="Adcionar Tarefa"  name="ChamarCriarTarefa" formaction="ChamarCriarTarefa"/>
- 
+
 </div>
 
 <%@	taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"	%>
@@ -183,9 +185,10 @@ Pesquisar Curso: <input type="text" size="60" placeholder="nome do curso"  name=
 
 
 <a href="excluirTarefa?logica=ExcluirTarefaServlet&id=${tarefa.id}"class="btn btn-primary" target="_self">Excluir</a>
-<button class="btn btn-primary" onclick="limpar();">Editar</button>
 
-        
+<a href="buscaTarefa?logica=buscaTarefaServler&temaTarefa=${tarefa.temaTarefa}"class="btn btn-primary" target="_self">Atualizar</a>
+ 
+
 </div> 
 </div>  <!-- fim da row -->
 
@@ -195,7 +198,7 @@ Pesquisar Curso: <input type="text" size="60" placeholder="nome do curso"  name=
 		
 </c:forEach>
 </table>
-
+ </form>
 
  </body> 
   <c:import	url="rodape.jsp"/>

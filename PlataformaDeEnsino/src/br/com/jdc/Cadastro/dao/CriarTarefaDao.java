@@ -75,6 +75,7 @@ public class CriarTarefaDao {
 
 				Tarefa tarefa1 = new Tarefa();
 				
+			
 				tarefa1.setTemaTarefa(rs.getString("temaTarefa"));
 				tarefa1.setAvaliacaoTarefa(rs.getString("avaliacaoTarefa"));
 				tarefa1.setConteudoTarefa(rs.getString("conteudoTarefa"));
@@ -83,6 +84,7 @@ public class CriarTarefaDao {
 				tarefa1.setDtTerminoTarefa(rs.getString("dtTerminoTarefa"));
 				tarefa1.setMaterialTarefa(rs.getString("materialTarefa"));
 				
+					
 		       
 				
 				listaDados.add(tarefa1);
@@ -125,7 +127,7 @@ public class CriarTarefaDao {
 				tarefa.setDtInicioTarefa(rs.getString("dtInicioTarefa"));
 				tarefa.setDtTerminoTarefa(rs.getString("dtTerminoTarefa"));
 				tarefa.setMaterialTarefa(rs.getString("materialTarefa"));
-			
+				
 				//adiciona o contato na lista
 				tarefas.add(tarefa);
 			}
@@ -156,9 +158,15 @@ public void excluir(Tarefa tarefa )  {
 
 
 public void atualiza(Tarefa tarefa) {
-	  System.out.println("atualizei3 " );
+	  System.out.println("vou atualizar" );
+	  
+	    System.out.println(tarefa.getAvaliacaoTarefa());
+	    System.out.println(tarefa.getConteudoTarefa());
+	    System.out.println(tarefa.getConteudoTarefa());
+	    System.out.println(tarefa.getObjetivoTarefa());
+	    
 
-	String sql = "update tarefa set temaTarefa = ?, avaliacaoTarefa = ?, conteudoTarefa= ?,objetivoTarefa=?,dtInicioTarefa=?,dtTerminoTarefa=?, materialTarefa=?";
+	String sql = "update tarefa set temaTarefa = ?, avaliacaoTarefa = ?, conteudoTarefa= ?,objetivoTarefa=?,dtInicioTarefa=?,dtTerminoTarefa=?, materialTarefa=?  where temaTarefa= ?";
 	try {
 		PreparedStatement stmt = this.connection.prepareStatement(sql);
 		
@@ -169,7 +177,9 @@ public void atualiza(Tarefa tarefa) {
 		stmt.setString(5, tarefa.getDtInicioTarefa());
 		stmt.setString(6, tarefa.getDtTerminoTarefa());
 		stmt.setString(7, tarefa.getMaterialTarefa());
-		
+		stmt.setString(8, tarefa.getTemaTarefa());
+		System.out.println("Atualizai a tarefa"+ tarefa.getTemaTarefa());
+	    
 		stmt.execute();
 	} catch (SQLException e) {
 		throw new RuntimeException(e);

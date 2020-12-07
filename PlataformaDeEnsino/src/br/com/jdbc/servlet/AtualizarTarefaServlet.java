@@ -26,7 +26,7 @@ public class AtualizarTarefaServlet   extends HttpServlet {
         PrintWriter out = response.getWriter();
 
 
-        // buscando os parâmetros no request
+        // buscando os parametros no request
         String temaTarefa = request.getParameter("temaTarefa");
         
         String avaliacaoTarefa = request.getParameter("avaliacaoTarefa");
@@ -66,16 +66,20 @@ public class AtualizarTarefaServlet   extends HttpServlet {
         // atualizar o contato
       CriarTarefaDao dao = new  CriarTarefaDao();
         
-    
+
+		 System.out.println("passai aqui para atualizar "+ tarefa.getTemaTarefa());
+		   System.out.println(tarefa.getAvaliacaoTarefa());
+		    System.out.println(tarefa.getConteudoTarefa());
+		    System.out.println(tarefa.getConteudoTarefa());
+		    System.out.println(tarefa.getObjetivoTarefa());
  
 			dao.atualiza(tarefa);
 		
-			 System.out.println("atualizando " );
     
         
 			RequestDispatcher rd1 = request.getRequestDispatcher("/tela-updateTarefa.jsp");
 	        rd1.forward(request, response);
-}
+    }
 
 
 }

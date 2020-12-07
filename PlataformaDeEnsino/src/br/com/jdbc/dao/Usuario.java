@@ -2,7 +2,7 @@ package br.com.jdbc.dao;
 
 public class Usuario extends Endereco {
 	
-	
+	private String funcao;
 	private String nome;
 	private String nomeMae;
 	private String dtNascimento;
@@ -12,6 +12,14 @@ public class Usuario extends Endereco {
 	private String email;
 	private String senha;
 	private Long id;
+	
+	
+	public String getFuncao() {
+		return funcao;
+	}
+	public void setFuncao(String funcao) {
+		this.funcao = funcao;
+	}
 	
 	public String getNome() {
 		return nome;
@@ -67,6 +75,20 @@ public class Usuario extends Endereco {
 	public void setId(Long id) {
 		this.id = id;
 	}
+    public boolean ehIgual(String email, String senha) {
+        try {if(!this.email.equals(email)) {
+            return false;
+        }
+
+        if(!this.senha.equals(senha)) {
+            return false;
+        }
+        } catch (NullPointerException e) {
+			return false;
+		}
+
+        return true;
+    }
 
 
 

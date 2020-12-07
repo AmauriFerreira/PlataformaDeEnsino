@@ -4,6 +4,9 @@
 									br.com.jdbc.Modelo.*,
 									br.com.jdbc.dao.*"	%>
 									
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>	
+									
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -50,7 +53,7 @@
             <a class="navbar-brand" href="tela-meusCursosAluno.jsp">Meus Cursos</a>
             
             
-            
+      <a class="navbar-brand" href="entrada?acao=Logout">Sair</a>
          
           
           </ul>
@@ -68,10 +71,26 @@
 
  <br>
  
-
-   
 <table>
 
+ <h1>
+.Atendimento personalizado para aulas online <img src='<c:url value="/imagem.png"/>' /><br>
+
+
+
+
+.Ambiente interativo &nbsp;&nbsp;&nbsp; <img src='<c:url value="/ambinetInterativo.png"/>'/><br><br>
+
+       
+
+.Aulas Gravadas  &nbsp;&nbsp;&nbsp;<img src='<c:url value="/aulasGravas.png"/>'/><br><br>
+
+
+
+
+
+
+</h1>
 
 
 
@@ -82,5 +101,5 @@
   </body>
 
 </table>
-  
+   <c:import	url="rodape.jsp"/>
 </html>
